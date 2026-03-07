@@ -52,7 +52,11 @@ card.innerHTML = `
 <p>Priority: ${issue.priority}</p>
 <p>Author: ${issue.author}</p>
 <p>Label: ${issue.label}</p>
-
+<hr class="text-gray-200 mt-4"/>
+<div class="mt-4">
+ <p>#1 by_john_doe</p>
+ <p>1/15/2024</p>
+</div>
 </div>
 `
 
@@ -106,6 +110,14 @@ const issue = data.data
       <div class="">
         
          <div>Priority: ${issue.priority}</div>
+      </div>
+      <div class="">
+        
+         <div>Author: ${issue.author}</div>
+      </div>
+      <div class="">
+        
+         <div>Label: ${issue.label}</div>
       </div>
    `
    document.getElementById('word_modal').showModal()
