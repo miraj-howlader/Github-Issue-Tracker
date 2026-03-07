@@ -38,8 +38,12 @@ card.className =
 `border-t-4 ${borderColor} p-4 shadow rounded bg-white`
 
 card.innerHTML = `
-
-<h3 class="font-bold text-lg">${issue.title}</h3>
+<div onclick="showIssue(${issue.id})">
+ <div class='flex justify-between'>
+ <p class='text-amber-400 text-2xl rounded-full'><i class="fa-regular fa-circle-check"></i></p>
+  <p class='bg-[#4A00FF] text-white px-2 py-0.5 rounded-md'>${issue.priority}</p>
+ </div>
+<h3 class="font-bold text-lg mt-4">${issue.title}</h3>
 
 <p class="text-sm text-gray-500">${issue.description}</p>
 
@@ -49,9 +53,7 @@ card.innerHTML = `
 <p>Author: ${issue.author}</p>
 <p>Label: ${issue.label}</p>
 
-<button onclick="showIssue(${issue.id})"
-class="text-blue-500 mt-2">View Details</button>
-
+</div>
 `
 
 container.appendChild(card)
