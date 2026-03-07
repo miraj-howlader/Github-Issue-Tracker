@@ -16,6 +16,8 @@ displayIssues(issues)
 
 }
 
+loadIssues()
+
 
 const displayIssues = (issues) => {
 
@@ -70,18 +72,41 @@ const data = await res.json()
 
 const issue = data.data
 
-alert(`
-Title: ${issue.title}
+// alert(`
+// Title: ${issue.title}
 
-Description: ${issue.description}
+// Description: ${issue.description}
 
-Status: ${issue.status}
+// Status: ${issue.status}
 
-Category: ${issue.category}
+// Category: ${issue.category}
 
-Priority: ${issue.priority}
-`)
+// Priority: ${issue.priority}
+// `)
+
+ const detailsBox = document.getElementById('details-container')
+   detailsBox.innerHTML=`
+   <div class="">
+        <h2 class="text-2xl font-bold"> Title: ${issue.title}</h2>
+      </div>
+      <div class="">
+        
+        <p>Description: ${issue.description}</p>
+      </div>
+      <div class="">
+      
+        <p>Status: ${issue.status}</p>
+      </div>
+      <div class="">
+        
+         <div>Category: ${issue.category}</div>
+      </div>
+      <div class="">
+        
+         <div>Priority: ${issue.priority}</div>
+      </div>
+   `
+   document.getElementById('word_modal').showModal()
 
 }
 
-displayIssues()

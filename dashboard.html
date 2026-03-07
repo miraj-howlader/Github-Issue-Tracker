@@ -7,7 +7,11 @@
      <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
      <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-  </head>
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="./style/style.css">
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap" rel="stylesheet">
+    </head>
 
   <body>
     <nav class="flex max-w-7xl mx-auto justify-between items-center p-4 ">
@@ -57,6 +61,24 @@
       </div>
     </section>
 
+
+
+
+    <!-- modal  -->
+     
+<dialog id="word_modal" class="modal modal-bottom sm:modal-middle">
+  <div class="modal-box">
+    <div id="details-container" class="space-y-5">
+      
+    </div>
+    <div class="modal-action">
+      <form method="dialog">
+        <!-- if there is a button in form, it will close the modal -->
+        <button class="btn bg-[#4A00FF] p-2 text-white"><i class="fa-solid fa-xmark"></i></button>
+      </form>
+    </div>
+  </div>
+</dialog>
 
    
 
