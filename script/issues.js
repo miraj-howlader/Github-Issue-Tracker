@@ -59,6 +59,7 @@ container.appendChild(card)
 }
 
 
+
 const showIssue = async (id) => {
 
 const res = await fetch(
@@ -82,3 +83,5 @@ Priority: ${issue.priority}
 `)
 
 }
+
+displayIssues()

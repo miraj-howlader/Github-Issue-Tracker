@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
      <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+     <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   </head>
 
@@ -14,7 +15,7 @@
 
       <div>
         <input id="searchInput" class="text-black p-1 rounded border" placeholder="Search..."/>
-        <button onclick="searchIssue()" class="bg-blue-500 px-3 py-1 rounded">
+        <button onclick="searchIssue()" class="bg-[#4A00FF] text-white px-3 py-1 rounded">
           Search
         </button>
       </div>
@@ -23,20 +24,52 @@
     <section class="flex max-w-7xl mx-auto">
         <div class="flex gap-4 p-4">
 
-<button onclick="loadIssues('all')" id="allTab">All</button>
+<button onclick="loadIssues('all')" id="allTab" class="bg-[#4A00FF] px-4 py-2 text-white rounded-md cursor-pointer">All</button>
 
-<button onclick="loadIssues('open')" id="openTab">Open</button>
+<button onclick="loadIssues('open')" id="openTab" class=" cursor-pointer">Open</button>
 
-<button onclick="loadIssues('closed')" id="closedTab">Closed</button>
+<button onclick="loadIssues('closed')" id="closedTab" class=" cursor-pointer">Closed</button>
 
 </div>
+
+
+
     </section>
 
+
+    <section class="flex max-w-7xl mx-auto justify-between px-4">
+      <div class="flex items-center justify-center gap-6">
+        <p class="text-3xl bg-blue-200 text-[#4A00FF] rounded-full p-1"><i class="fa-solid fa-globe"></i></p>
+        <div class="flex flex-col">
+           <h2>50 Issues</h2>
+         <p>Track and manage your project issues</p>
+        </div>
+      </div>
+      <div class="flex gap-8">
+       <div class="flex items-center justify-center gap-2">
+          <p class="w-2 h-2 bg-green-600 rounded-full"></p>
+         <p class=" items-center justify-center">Open</p>
+       </div>
+       <div class="flex items-center justify-center gap-2">
+          <p class="w-2 h-2 bg-purple-600 rounded-full"></p>
+         <p class=" items-center justify-center">Close</p>
+       </div>
+      </div>
+    </section>
+
+
+   
 
     <section class="flex max-w-7xl mx-auto">
        <div id="issuesContainer" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 p-4">
 
 </div>
+    </section>
+
+    <section  class="flex max-w-7xl mx-auto">
+        <div id="spinner" class="hidden text-center p-4">
+     Loading...
+    </div> 
     </section>
 
     <script src="./script/issues.js"></script>

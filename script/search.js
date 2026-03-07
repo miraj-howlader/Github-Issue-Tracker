@@ -12,3 +12,10 @@ const data = await res.json()
 displayIssues(data.data)
 
 }
+
+
+document.getElementById("spinner").classList.remove("hidden")
+
+// after load
+
+document.getElementById("spinner").classList.add("hidden")
