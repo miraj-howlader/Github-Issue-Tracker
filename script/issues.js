@@ -1,22 +1,42 @@
-const loadIssues = async (status="all") => {
+let allIssues = []
 
-const res = await fetch(
-"https://phi-lab-server.vercel.app/api/v1/lab/issues"
-)
+const loadIssues = async (status = "all") => {
 
+const res = await fetch("https://phi-lab-server.vercel.app/api/v1/lab/issues")
 const data = await res.json()
 
-let issues = data.data
+allIssues = data.data
 
+let issues = allIssues
+
+// filter for tab
 if(status !== "all"){
-issues = issues.filter(issue => issue.status === status)
+issues = allIssues.filter(issue => issue.status === status)
 }
+
+// update counts
+updateCounts(issues)
 
 displayIssues(issues)
 
 }
 
 loadIssues()
+
+
+const updateCounts = (issues) => {
+
+document.getElementById("issueCount").innerText = issues.length + " Issues"
+
+const openIssues = allIssues.filter(issue => issue.status === "open")
+const closeIssues = allIssues.filter(issue => issue.status === "closed")
+
+document.getElementById("openCount").innerText = "Open (" + openIssues.length + ")"
+document.getElementById("closeCount").innerText = "Closed (" + closeIssues.length + ")"
+
+}
+
+
 
 
 const displayIssues = (issues) => {
@@ -78,17 +98,7 @@ const data = await res.json()
 
 const issue = data.data
 
-// alert(`
-// Title: ${issue.title}
 
-// Description: ${issue.description}
-
-// Status: ${issue.status}
-
-// Category: ${issue.category}
-
-// Priority: ${issue.priority}
-// `)
 
  const detailsBox = document.getElementById('details-container')
    detailsBox.innerHTML=`

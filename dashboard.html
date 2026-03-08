@@ -42,24 +42,29 @@
 
 
     <section class="flex max-w-7xl mx-auto justify-between px-4">
-      <div class="flex items-center justify-center gap-6">
-        <p class="text-3xl bg-blue-200 text-[#4A00FF] rounded-full p-1"><i class="fa-solid fa-globe"></i></p>
-        <div class="flex flex-col">
-           <h2>50 Issues</h2>
-         <p>Track and manage your project issues</p>
-        </div>
-      </div>
-      <div class="flex gap-8">
-       <div class="flex items-center justify-center gap-2">
-          <p class="w-2 h-2 bg-green-600 rounded-full"></p>
-         <p class=" items-center justify-center">Open</p>
-       </div>
-       <div class="flex items-center justify-center gap-2">
-          <p class="w-2 h-2 bg-purple-600 rounded-full"></p>
-         <p class=" items-center justify-center">Close</p>
-       </div>
-      </div>
-    </section>
+  <div class="flex items-center justify-center gap-6">
+    <p class="text-3xl bg-blue-200 text-[#4A00FF] rounded-full p-1">
+      <i class="fa-solid fa-globe"></i>
+    </p>
+
+    <div class="flex flex-col">
+      <h2 id="issueCount">0 Issues</h2>
+      <p>Track and manage your project issues</p>
+    </div>
+  </div>
+
+  <div class="flex gap-8">
+    <div class="flex items-center gap-2">
+      <p class="w-2 h-2 bg-green-600 rounded-full"></p>
+      <p id="openCount">Open</p>
+    </div>
+
+    <div class="flex items-center gap-2">
+      <p class="w-2 h-2 bg-purple-600 rounded-full"></p>
+      <p id="closeCount">Closed</p>
+    </div>
+  </div>
+</section>
 
 
 
