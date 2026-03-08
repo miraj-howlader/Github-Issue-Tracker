@@ -16,12 +16,43 @@ issues = allIssues.filter(issue => issue.status === status)
 
 // update counts
 updateCounts(issues)
-
+setActiveTab(status)
 displayIssues(issues)
 
 }
 
 loadIssues()
+
+
+
+
+const setActiveTab = (status) => {
+
+const tabs = document.querySelectorAll(".tab-btn")
+
+tabs.forEach(tab => {
+tab.classList.remove("bg-[#4A00FF]","text-white")
+tab.classList.add("border","border-gray-300")
+})
+
+const activeTab = document.getElementById(status + "Tab")
+
+activeTab.classList.remove("border","border-gray-300")
+activeTab.classList.add("bg-[#4A00FF]","text-white")
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 const updateCounts = (issues) => {
@@ -104,6 +135,10 @@ const issue = data.data
    detailsBox.innerHTML=`
    <div class="">
         <h2 class="text-2xl font-bold"> Title: ${issue.title}</h2>
+         <div class='flex gap-4'>
+     <button class='bg-green-500 text-white rounded-full px-2 py-0.5'>${issue.status}</button>
+     <p>. Opened by Fahim Ahmed . 22/02/2026</p>
+     </div>
       </div>
       <div class="">
         

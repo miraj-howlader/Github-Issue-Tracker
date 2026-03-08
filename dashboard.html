@@ -26,19 +26,25 @@
     </nav>
 
     <section class="flex max-w-7xl mx-auto">
-        <div class="flex gap-4 p-4">
+  <div class="flex gap-4 p-4">
 
-<button onclick="loadIssues('all')" id="allTab" class="bg-[#4A00FF] px-4 py-2 text-white rounded-md cursor-pointer">All</button>
+    <button onclick="loadIssues('all')" id="allTab"
+      class="tab-btn bg-[#4A00FF] px-4 py-2 text-white rounded-md cursor-pointer">
+      All
+    </button>
 
-<button onclick="loadIssues('open')" id="openTab" class=" cursor-pointer">Open</button>
+    <button onclick="loadIssues('open')" id="openTab"
+      class="tab-btn px-4 py-2 border border-gray-300 rounded-md cursor-pointer">
+      Open
+    </button>
 
-<button onclick="loadIssues('closed')" id="closedTab" class=" cursor-pointer">Closed</button>
+    <button onclick="loadIssues('closed')" id="closedTab"
+      class="tab-btn px-4 py-2 border border-gray-300 rounded-md cursor-pointer">
+      Closed
+    </button>
 
-</div>
-
-
-
-    </section>
+  </div>
+</section>
 
 
     <section class="flex max-w-7xl mx-auto justify-between px-4">
